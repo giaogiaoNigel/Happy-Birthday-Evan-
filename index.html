@@ -4,33 +4,36 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>祝 Evan 许书凯17岁生日快乐</title>
-  <meta name="description" content="祝 Evan 许书凯17岁生日快乐，一个炫酷又专属的生日网站" />
+  <meta name="description" content="Evan 许书凯 17岁生日快乐专属网站" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- 开场动画 -->
+  <div id="intro-screen">
+    <div class="intro-content">
+      <p class="intro-small">Loading Evan's Birthday...</p>
+      <h1>Happy 17th Birthday</h1>
+      <div class="intro-bar"><span></span></div>
+      <p class="intro-tip">正在进入 Evan 的专属生日宇宙 💙</p>
+    </div>
+  </div>
+
   <canvas id="particle-canvas"></canvas>
   <canvas id="firework-canvas"></canvas>
 
   <div class="floating-lights">
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
-    <span></span>
+    <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
   </div>
 
-  <!-- 足球装饰 -->
   <div class="floating-footballs">
     <span>⚽</span>
     <span>⚽</span>
     <span>⚽</span>
   </div>
 
-  <!-- 背景音乐 -->
   <audio id="bgMusic" loop>
     <source src="music/birthday.mp3" type="audio/mpeg" />
-    你的浏览器不支持音频播放。
   </audio>
 
   <main class="container">
@@ -49,11 +52,11 @@
         <div class="btn-group">
           <button id="celebrateBtn" class="btn primary">点我放烟花</button>
           <button id="musicBtn" class="btn secondary">播放音乐 🎵</button>
-          <a href="#photo-section" class="btn secondary">看照片</a>
+          <a href="#goal-section" class="btn secondary">去进球</a>
         </div>
       </div>
 
-      <div class="hero-photo" id="photo-section">
+      <div class="hero-photo">
         <div class="photo-card">
           <img src="images/evan.jpg" alt="Evan 许书凯的照片" />
           <div class="photo-glow"></div>
@@ -61,49 +64,58 @@
       </div>
     </section>
 
-    <!-- 兴趣元素 -->
+    <section class="debate-section glass">
+      <h2>Debate Mode On 🎤</h2>
+      <div class="debate-box">
+        <div class="debate-label">English Debate Lines</div>
+        <div class="debate-line" id="debateLine">Ladies and gentlemen...</div>
+      </div>
+      <p class="debate-desc">
+        愿你在每一次英文辩论中都能自信表达、清晰立论、锋芒尽显，
+        用思考和语言赢得掌声。
+      </p>
+    </section>
+
     <section class="interest-section glass">
       <h2>Evan 的热爱</h2>
       <div class="interest-grid">
         <div class="interest-card debate">
           <div class="interest-icon">🎤</div>
           <h3>English Debate</h3>
-          <p>
-            愿你在每一次英文辩论中都思维敏捷、表达锋利、气场全开，
-            用语言和逻辑闪耀全场。
-          </p>
+          <p>逻辑锋利，表达自信，观点清晰，气场拉满。</p>
         </div>
-
         <div class="interest-card football">
           <div class="interest-icon">⚽</div>
           <h3>Football</h3>
-          <p>
-            愿你在球场上继续自由奔跑，带着热爱冲刺、传球、射门，
-            每一次触球都充满少年意气。
-          </p>
+          <p>愿你一直自由奔跑，热爱球场，踢出属于自己的节奏。</p>
         </div>
-
         <div class="interest-card chelsea">
           <div class="interest-icon">💙</div>
           <h3>Chelsea FC</h3>
-          <p>
-            把切尔西的蓝也写进今天的祝福里。
-            愿你像你热爱的球队一样，始终坚定、勇敢、充满斗志。
-          </p>
+          <p>切尔西蓝写进今天的祝福里，愿热爱始终鲜明坚定。</p>
         </div>
       </div>
     </section>
 
-    <!-- 蛋糕区域 -->
+    <section class="goal-section glass" id="goal-section">
+      <h2>Kick for Evan ⚽</h2>
+      <div class="goal-game">
+        <div class="goal-area">
+          <div class="goal-net"></div>
+          <div class="goalkeeper">🧤</div>
+          <div class="football" id="football">⚽</div>
+        </div>
+        <button id="kickBtn" class="btn primary">射门！</button>
+        <div id="goalText" class="goal-text">准备好，为 Evan 打进这一球！</div>
+      </div>
+    </section>
+
     <section class="cake-section glass">
       <h2>17岁生日蛋糕 🎂</h2>
       <div class="cake-wrap">
-        <div class="cake-image-card">
-          <img src="images/cake.png" alt="生日蛋糕" />
-        </div>
+        
 
         <div class="cake-css">
-          <div class="cake-number">17</div>
           <div class="candles">
             <span class="candle"><i class="flame"></i></span>
             <span class="candle"><i class="flame"></i></span>
@@ -115,25 +127,20 @@
           <div class="cake-base"></div>
         </div>
       </div>
-      <p class="cake-text">愿 Evan 的十七岁，像蛋糕一样甜，像烟花一样耀眼，像梦想一样发光。</p>
+      <p class="cake-text">愿 Evan 的17岁，像蛋糕一样甜，像烟花一样亮，像热爱一样滚烫。</p>
     </section>
 
     <section class="message-section glass">
       <h2>给 Evan 的生日寄语</h2>
       <p>
-        十七岁，是一个闪闪发光的年纪。
-        愿 Evan 许书凯在新的一岁里，
-        <span class="gradient-text">继续热爱英文辩论，继续驰骋足球场，继续坚定地喜欢切尔西</span>，
-        也继续做那个耀眼、真诚、勇敢的自己。
-      </p>
-      <p>
-        愿你眼里始终有光，脚下始终有路，
-        在喜欢的事情里持续发热，在成长的路上越来越强大。✨
+        十七岁，是闪闪发光的年纪。
+        愿你继续热爱英文辩论，继续奔跑在足球场上，
+        继续坚定地喜欢切尔西，也继续做那个真诚、勇敢、耀眼的自己。
       </p>
       <p>
         Happy 17th Birthday, Evan.
-        May your words be powerful, your goals be clear,
-        your kicks be sharp, and your future be brilliant. 💙
+        May your words be sharp, your heart be brave,
+        your goals be clear, and your future be brilliant. 💙
       </p>
     </section>
 
