@@ -1,12 +1,22 @@
 /* 开场动画 */
 window.addEventListener("load", () => {
-  setTimeout(() => {
-    document.getElementById("intro-screen").classList.add("hide");
-  }, 2600);
+  const intro = document.getElementById("intro-screen");
+
+  if (intro) {
+    setTimeout(() => {
+      intro.classList.add("hide");
+    }, 2600);
+
+    setTimeout(() => {
+      intro.style.display = "none";
+    }, 3600);
+  }
 
   setTimeout(() => {
-    for (let i = 0; i < 5; i++) {
-      setTimeout(() => launchFirework(), i * 280);
+    if (typeof launchFirework === "function") {
+      for (let i = 0; i < 5; i++) {
+        setTimeout(() => launchFirework(), i * 280);
+      }
     }
   }, 700);
 });
