@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>祝 Evan 许书凯17岁生日快乐</title>
+  <meta name="description" content="祝 Evan 许书凯17岁生日快乐，一个炫酷又专属的生日网站" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particle-canvas"></canvas>
+  <canvas id="firework-canvas"></canvas>
+
+  <div class="floating-lights">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <!-- 足球装饰 -->
+  <div class="floating-footballs">
+    <span>⚽</span>
+    <span>⚽</span>
+    <span>⚽</span>
+  </div>
+
+  <!-- 背景音乐 -->
+  <audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg" />
+    你的浏览器不支持音频播放。
+  </audio>
+
+  <main class="container">
+    <section class="hero glass">
+      <div class="hero-text">
+        <p class="small-title">Happy 17th Birthday</p>
+        <div class="age-badge">17</div>
+
+        <h1>
+          祝 <span class="highlight">Evan · 许书凯</span><br />
+          十七岁生日快乐 🎉
+        </h1>
+
+        <p class="typing" id="typing-text"></p>
+
+        <div class="btn-group">
+          <button id="celebrateBtn" class="btn primary">点我放烟花</button>
+          <button id="musicBtn" class="btn secondary">播放音乐 🎵</button>
+          <a href="#photo-section" class="btn secondary">看照片</a>
+        </div>
+      </div>
+
+      <div class="hero-photo" id="photo-section">
+        <div class="photo-card">
+          <img src="images/evan.jpg" alt="Evan 许书凯的照片" />
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 兴趣元素 -->
+    <section class="interest-section glass">
+      <h2>Evan 的热爱</h2>
+      <div class="interest-grid">
+        <div class="interest-card debate">
+          <div class="interest-icon">🎤</div>
+          <h3>English Debate</h3>
+          <p>
+            愿你在每一次英文辩论中都思维敏捷、表达锋利、气场全开，
+            用语言和逻辑闪耀全场。
+          </p>
+        </div>
+
+        <div class="interest-card football">
+          <div class="interest-icon">⚽</div>
+          <h3>Football</h3>
+          <p>
+            愿你在球场上继续自由奔跑，带着热爱冲刺、传球、射门，
+            每一次触球都充满少年意气。
+          </p>
+        </div>
+
+        <div class="interest-card chelsea">
+          <div class="interest-icon">💙</div>
+          <h3>Chelsea FC</h3>
+          <p>
+            把切尔西的蓝也写进今天的祝福里。
+            愿你像你热爱的球队一样，始终坚定、勇敢、充满斗志。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 蛋糕区域 -->
+    <section class="cake-section glass">
+      <h2>17岁生日蛋糕 🎂</h2>
+      <div class="cake-wrap">
+        <div class="cake-image-card">
+          <img src="images/cake.png" alt="生日蛋糕" />
+        </div>
+
+        <div class="cake-css">
+          <div class="cake-number">17</div>
+          <div class="candles">
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+            <span class="candle"><i class="flame"></i></span>
+          </div>
+          <div class="cake-layer top"></div>
+          <div class="cake-layer middle"></div>
+          <div class="cake-layer bottom"></div>
+          <div class="cake-base"></div>
+        </div>
+      </div>
+      <p class="cake-text">愿 Evan 的十七岁，像蛋糕一样甜，像烟花一样耀眼，像梦想一样发光。</p>
+    </section>
+
+    <section class="message-section glass">
+      <h2>给 Evan 的生日寄语</h2>
+      <p>
+        十七岁，是一个闪闪发光的年纪。
+        愿 Evan 许书凯在新的一岁里，
+        <span class="gradient-text">继续热爱英文辩论，继续驰骋足球场，继续坚定地喜欢切尔西</span>，
+        也继续做那个耀眼、真诚、勇敢的自己。
+      </p>
+      <p>
+        愿你眼里始终有光，脚下始终有路，
+        在喜欢的事情里持续发热，在成长的路上越来越强大。✨
+      </p>
+      <p>
+        Happy 17th Birthday, Evan.
+        May your words be powerful, your goals be clear,
+        your kicks be sharp, and your future be brilliant. 💙
+      </p>
+    </section>
+
+    <section class="count-section glass">
+      <div class="count-card">
+        <h3>十七岁专属数值</h3>
+        <div class="numbers">
+          <div class="num-box">
+            <span id="days">0</span>
+            <small>快乐指数</small>
+          </div>
+          <div class="num-box">
+            <span id="stars">0</span>
+            <small>闪耀值</small>
+          </div>
+          <div class="num-box">
+            <span id="wishes">0</span>
+            <small>祝福值</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="glass footer">
+      <p>Made with ❤️ for Evan · 许书凯 · Happy 17th Birthday</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
